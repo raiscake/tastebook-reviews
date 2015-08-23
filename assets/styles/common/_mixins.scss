@@ -1,0 +1,84 @@
+// Media Queries
+
+@mixin min($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+
+@mixin max($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+    @content;
+  }
+}
+
+// End media queries
+
+@mixin va-middle() {
+  display: table;
+  width: 100%;
+  padding: ($grid-gutter-width * 3) 0;
+  .va-middle {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+
+@mixin column-count($count, $gap) {
+  -webkit-column-count: $count; /* Chrome, Safari, Opera */
+  -moz-column-count: $count; /* Firefox */
+  column-count: $count;
+  -webkit-column-gap: $gap; /* Chrome, Safari, Opera */
+  -moz-column-gap: $gap; /* Firefox */
+  column-gap: $gap;
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@mixin bg($image-filename: '', $image-filename-retina: '') {
+  overflow: hidden;
+  position: relative;
+  background: none;
+  .bg {
+    @include img-retina(
+            $image-filename,
+            $image-filename-retina
+    ,'',''
+    );
+    position: absolute;
+    height: 120%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}

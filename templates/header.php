@@ -48,7 +48,15 @@
 
 
                 <section class="section featured item <?= $active ?>" style="background-image:url(<?= $cover[0] ?>">
-                    <?php the_title(); ?>
+                    <div class="overlay"></div>
+                    <div class="container">
+                        <div class="va-middle-wrap">
+                            <div class="va-middle">
+                                <?php the_title(); ?>
+                            </div>
+                        </div>
+                    </div>
+
                 </section>
 
             <?php $first = false; endwhile; endif; wp_reset_query(); ?>
