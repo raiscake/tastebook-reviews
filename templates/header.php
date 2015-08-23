@@ -52,7 +52,9 @@
                     <div class="container">
                         <div class="va-middle-wrap">
                             <div class="va-middle">
-                                <?php the_title(); ?>
+                                <h1 class="featured-title">
+                                    <a class="featured-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                </h1>
                             </div>
                         </div>
                     </div>
