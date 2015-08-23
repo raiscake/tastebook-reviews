@@ -20,3 +20,49 @@
         </nav>
     </div>
 </header>
+
+
+<?php if (is_front_page()) : ?>
+
+    <div id="featuredCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <?php
+            $first = true;
+            $featured = new WP_Query('category_name=featured&posts_per_page=5');
+                if ($featured->have_posts ()) :
+                    while ($featured->have_posts()):
+                        $featured->the_post();
+                        $cover = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'featured-img');
+                        $active = ($first == true ? 'active' : '');
+
+            ?>
+
+
+                <section class="section featured item <?= $active ?>" style="background-image:url(<?= $cover[0] ?>">
+                    <?php the_title(); ?>
+                </section>
+
+            <?php $first = false; endwhile; endif; wp_reset_query(); ?>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#featuredCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#featuredCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+<?php endif; ?>
