@@ -22,7 +22,10 @@
 </header>
 
 
-<?php if (is_front_page()) : ?>
+<?php if (is_front_page()) :
+    $first = true;
+    $featured = new WP_Query('category_name=featured&posts_per_page=5');
+    if ($featured->have_posts ()) :?>
 
     <div id="featuredCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -35,11 +38,8 @@
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-            <?php
-            $first = true;
-            $featured = new WP_Query('category_name=featured&posts_per_page=5');
-                if ($featured->have_posts ()) :
-                    while ($featured->have_posts()):
+
+            <?php        while ($featured->have_posts()):
                         $featured->the_post();
                         $cover = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'featured-img');
                         $active = ($first == true ? 'active' : '');
@@ -61,7 +61,7 @@
 
                 </section>
 
-            <?php $first = false; endwhile; endif; wp_reset_query(); ?>
+            <?php $first = false; endwhile;  ?>
         </div>
 
         <!-- Left and right controls -->
@@ -75,4 +75,4 @@
         </a>
     </div>
 
-<?php endif; ?>
+<?php endif; wp_reset_query(); endif; ?>
