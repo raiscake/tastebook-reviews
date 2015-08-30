@@ -1,0 +1,13 @@
+/* Front Page */
+
+.magazine {
+  .category-row {
+    article {
+      .magazine-title {
+        >img {
+          @extend .img-responsive;
+        }
+      }
+    }
+  }
+}
