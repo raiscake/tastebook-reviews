@@ -47,6 +47,11 @@
   }
   &.magazine {
     .category-row {
+      .cat-name {
+        font-size: 1.25em;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
       .magazine-entry {
         margin: 0 0 3em;
         .magazine-title {

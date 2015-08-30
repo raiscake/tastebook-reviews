@@ -6,7 +6,7 @@
     <!-- Start Category Loop -->
     <?php foreach ($categories as $category) : ?>
         <div class="category-row">
-            <h2><?= $category->name ?></h2>
+            <h2 class="cat-name"><?= $category->name ?></h2>
             <!-- Start Posts Loop -->
             <div class="row">
                 <?php $j = 1;
