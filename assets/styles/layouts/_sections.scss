@@ -20,12 +20,44 @@
     text-align: center;
     background-position: center;
     background-size: cover;
+    a {
+      color: $white;
+      &:hover {
+        text-decoration: none;
+      }
+    }
     .container {
       height: 100%;
     }
-    .featured-link {
-      color: $white;
+    .featured-cats {
+      display: inline-block;
+      padding: .5em .75em;
+      border: 1px solid $white;
       text-transform: uppercase;
+      &:hover {
+        background-color: $white;
+        a {
+          color: $text-color;
+        }
+      }
+    }
+    .featured-link {
+
+    }
+  }
+  &.magazine {
+    .category-row {
+      .magazine-entry {
+        margin: 0 0 3em;
+        .magazine-title {
+          >img {
+            @extend .img-responsive;
+          }
+        }
+        .entry-meta {
+          color: lighten($text-color, 25%);
+        }
+      }
     }
   }
 }

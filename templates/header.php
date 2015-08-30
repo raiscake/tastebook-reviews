@@ -52,9 +52,12 @@
                     <div class="container">
                         <div class="va-middle-wrap">
                             <div class="va-middle">
-                                <h1 class="featured-title">
+                                <div class="featured-cats small">
+                                    <?php the_category(', '); ?>
+                                </div>
+                                <h2 class="featured-title">
                                     <a class="featured-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                </h1>
+                                </h2>
                             </div>
                         </div>
                     </div>

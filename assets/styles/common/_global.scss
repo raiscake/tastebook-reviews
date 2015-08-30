@@ -2,3 +2,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -mox-osx-font-smoothing: grayscale;
 }
+
+.small {
+  font-size: .78em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
