@@ -32,8 +32,9 @@
     .featured-cats {
       display: inline-block;
       padding: .5em .75em;
-      border: 1px solid $white;
+      font-weight: 700;
       text-transform: uppercase;
+      border: 1px solid $white;
       &:hover {
         background-color: $white;
         a {
@@ -47,10 +48,32 @@
   }
   &.magazine {
     .category-row {
-      .cat-name {
-        font-size: 1.25em;
-        font-weight: 700;
-        text-transform: uppercase;
+      .cat-name-wrap {
+        margin: 2em 0;
+        text-align: center;
+        .line-bar {
+          border-bottom: 1px solid $light-gray;
+        }
+        .cat-name {
+          margin-top: -1.2em;
+          font-size: 1.25em;
+          font-weight: 700;
+          letter-spacing: .1em;
+          text-transform: uppercase;
+          a {
+            display: inline-block;
+            padding: .5em .75em;
+            color: $text-color;
+            text-decoration: none;
+            background-color: $body-bg;
+            border: 1px solid $light-gray;
+            &:hover {
+              color: $body-bg;
+              background-color: $link-color;
+              border: 1px solid $link-color;
+            }
+          }
+        }
       }
       .magazine-entry {
         margin: 0 0 3em;
@@ -65,4 +88,8 @@
       }
     }
   }
+}
+
+#featuredCarousel {
+  margin-bottom: 4em;
 }

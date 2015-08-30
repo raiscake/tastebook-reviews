@@ -6,7 +6,12 @@
     <!-- Start Category Loop -->
     <?php foreach ($categories as $category) : ?>
         <div class="category-row">
-            <h2 class="cat-name"><?= $category->name ?></h2>
+            <div class="cat-name-wrap">
+                <div class="line-bar"></div>
+                <h2 class="cat-name">
+                    <a href="<?= get_category_link( $category->term_id ) ?>"><?= $category->name ?></a>
+                </h2>
+            </div>
             <!-- Start Posts Loop -->
             <div class="row">
                 <?php $j = 1;
