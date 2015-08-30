@@ -37,3 +37,4 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
  * Custom Functions
  */
 add_image_size('carousel-img', 1440, 810, true);
+add_image_size('frontpage-img', 500, 333, true);

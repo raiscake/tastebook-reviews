@@ -8,16 +8,23 @@
         <div class="category-row">
             <h2><?= $category->name ?></h2>
             <!-- Start Posts Loop -->
-            <?php $posts = new WP_Query(array(
-                'cat' => $category->cat_ID,
-                'posts_per_page' => 4
-            ));
-            if ($posts->have_posts()) :
-                while ($posts->have_posts()) :
-                    $posts-> the_post();
-                        get_template_part('templates/content');
-                 endwhile;
-            endif; wp_reset_query(); ?>
+            <div class="row">
+                <?php $j = 1;
+                $posts = new WP_Query(array(
+                    'cat' => $category->cat_ID,
+                    'posts_per_page' => 4
+                ));
+                if ($posts->have_posts()) :
+                    while ($posts->have_posts()) :
+                        $posts-> the_post();
+                        get_template_part('templates/content', 'front-page');
+                        if ($j % 2 == 0) :
+                            echo '</div><div class="row">';
+                        endif;
+                        $j++;
+                    endwhile;
+                endif; wp_reset_query(); ?>
+            </div>
         </div>
     <?php endforeach; ?>
 </section>
