@@ -14,7 +14,10 @@
         </div>
         <div class="entry-meta small">
             <time class="updated" datetime="<?= get_post_time('c', true); ?>"><?= get_the_date(); ?></time>
-            <span class="comments-count pull-right"><?php comments_popup_link(  '0 Comments' , '1 Comment', '% Comments' ); ?> </span>
+            <span class="comments-count pull-right">
+                <a class="twitter popup" href="http://twitter.com/intent/tweet?text=<?php the_title(); ?> <?php the_permalink(); ?>"><i class="fa fa-twitter"></i></a>
+                <?php comments_popup_link(  '<i class="fa fa-comments"></i> 0' , '<i class="fa fa-comments"></i> 1', '<i class="fa fa-comments"></i> %' ); ?>
+            </span>
         </div>
     </article>
 </div>

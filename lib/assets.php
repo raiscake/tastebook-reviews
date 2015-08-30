@@ -66,6 +66,7 @@ function asset_path($filename) {
 }
 
 function assets() {
+    wp_enqueue_style('font-awesome-css', get_stylesheet_directory_uri() . '/bower_components/fontawesome/css/font-awesome.css');
   wp_enqueue_style('sage_css', asset_path('styles/main.css'), false, null);
 
   if (is_single() && comments_open() && get_option('thread_comments')) {
