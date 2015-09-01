@@ -17,3 +17,20 @@
   @extend .btn;
   @extend .btn-primary;
 }
+
+.comments {
+  margin: 3em 0;
+  h2, h3 {
+    font-size: 1.6em;
+  }
+  .comment-body {
+     .comment-metadata {
+       @extend .small;
+       @extend .uppercase;
+       margin: .75em 0 1em;
+     }
+   }
+  .comment-respond {
+    margin-top: 3em;
+  }
+}

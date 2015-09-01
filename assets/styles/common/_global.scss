@@ -3,11 +3,32 @@ body {
   -mox-osx-font-smoothing: grayscale;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: $pink;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .small {
   font-size: .78em;
 }
 
 .uppercase {
-  letter-spacing: .1em;
+  letter-spacing: .08em;
   text-transform: uppercase;
+}
+
+// Override default bootstrap type margin
+p {
+  margin: 0 0 ($line-height-computed);
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: ($line-height-computed);
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
 }

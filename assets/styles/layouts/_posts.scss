@@ -36,6 +36,9 @@ article {
     .entry-meta {
       @extend .uppercase;
       margin: .75em 0 1.5em .1em;
+      time {
+        font-size: .88em;
+      }
     }
   }
 }
