@@ -115,6 +115,8 @@
           }
         }
         .entry-meta {
+          @extend .small;
+          @extend .uppercase;
           color: lighten($text-color, 25%);
         }
       }
