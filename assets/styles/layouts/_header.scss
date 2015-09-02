@@ -11,4 +11,20 @@
       padding: 0;
     }
   }
+  .navbar-collapse {
+    .navbar-nav {
+      @extend .col-sm-5;
+      li {
+        float: none !important;
+        display: inline-block;
+      }
+      &.left-nav {
+        text-align: right;
+        padding-right: $grid-gutter-width;
+      }
+      &.right-nav {
+        text-align: left;
+      }
+    }
+  }
 }
