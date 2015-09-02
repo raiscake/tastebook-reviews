@@ -13,8 +13,12 @@
 
         <nav class="collapse navbar-collapse" role="navigation">
             <?php
-            if (has_nav_menu('primary_navigation')) :
-                wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav navbar-right']);
+            if (has_nav_menu('left_primary_navigation')) :
+                wp_nav_menu(['theme_location' => 'left_primary_navigation', 'menu_class' => 'nav navbar-nav navbar-left left-nav']);
+            endif;
+
+            if (has_nav_menu('right_primary_navigation')) :
+                wp_nav_menu(['theme_location' => 'right_primary_navigation', 'menu_class' => 'nav navbar-nav navbar-right right-nav']);
             endif;
             ?>
         </nav>
