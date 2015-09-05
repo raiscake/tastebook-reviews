@@ -32,10 +32,12 @@
     .featured-cats {
       display: inline-block;
       padding: .5em .75em;
+      color: $white;
       font-weight: 700;
       text-transform: uppercase;
       border: 1px solid $white;
       &:hover {
+        color: $text-color;
         background-color: $white;
         a {
           color: $text-color;

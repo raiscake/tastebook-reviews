@@ -1,5 +1,9 @@
-<?php $categories = get_categories( array(
+<?php
+/* Exclude Featured Category */
+$featured = get_category_by_slug('featured');
+$categories = get_categories( array(
     'child_of'                 => 0,
+    'exclude'                  => $featured->cat_ID
 ) );?>
 
 <section class="section magazine">

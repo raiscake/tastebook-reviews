@@ -57,7 +57,12 @@
                         <div class="va-middle-wrap">
                             <div class="va-middle">
                                 <div class="featured-cats small">
-                                    <?php the_category(', '); ?>
+                                    <?php
+                                    the_category(', ');
+                                   /* $featured_cat = get_category_by_slug('featured');
+                                    exclude_post_categories($featured_cat, ', '); */
+
+                                    ?>
                                 </div>
                                 <h2 class="featured-title">
                                     <a class="featured-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
