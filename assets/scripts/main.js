@@ -19,6 +19,13 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+          var featuredLink = $('.featured-link');
+          featuredLink.mouseenter(function(){
+              featuredLink.closest('overlay').addClass('highlight');
+          });
+          featuredLink.mouseleave(function(){
+              featuredLink.closest('overlay').removeClass('highlight');
+          })
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
