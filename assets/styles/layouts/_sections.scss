@@ -127,12 +127,25 @@
   &.category-boxes {
     .category-box {
       @include aspect-ratio(1,1);
+      background-position: center;
+      background-size: cover;
       .category-link {
         @include va-middle;
+        width: 101%;
         height: 100%;
         padding: 0;
+        background: rgba(0,0,0,.6);
+        transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        &:hover {
+          text-decoration: none;
+          background: rgba(0,0,0,.2);
+        }
         h4 {
           margin: 0;
+          padding: 0 2em;
+          color: $white;
+          letter-spacing: .1em;
+          line-height: 1.4;
           text-align: center;
         }
       }

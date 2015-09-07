@@ -19,7 +19,7 @@ $k = 1;
                     <div class="category-box" style="background-image:url(<?= category_featured_image(array( 'term_id' => $category->cat_ID, 'size' => 'cat-box')); ?>)">
                         <div class="aspect-ratio">
                             <a href="<?= get_category_link( $category->term_id ) ?>" class="category-link">
-                                <h4 class="va-middle">
+                                <h4 class="small va-middle">
                                     <?= $category->name ?>
                                 </h4>
                             </a>
