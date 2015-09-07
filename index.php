@@ -11,4 +11,8 @@
   <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
 <?php endwhile; ?>
 
-<?php the_posts_navigation(); ?>
+<?php if(is_home() || is_category()) :
+    if ($wp_query->max_num_pages>1) {
+        pagination();
+    }
+endif; ?>
