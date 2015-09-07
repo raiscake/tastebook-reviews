@@ -1,6 +1,6 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class('single-article'); ?>>
-      <header>
+      <header class="article-header">
           <div class="aspect-ratio">
               <div class="entry-overlay"></div>
               <?php if (has_post_thumbnail()) :

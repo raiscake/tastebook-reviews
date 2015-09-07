@@ -9,6 +9,7 @@ use Roots\Sage\Wrapper;
 <html class="no-js" <?php language_attributes(); ?>>
   <?php get_template_part('templates/head'); ?>
   <body <?php body_class(); ?>>
+  <div class="body-wrap">
     <!--[if lt IE 9]>
       <div class="alert alert-warning">
         <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
@@ -32,14 +33,15 @@ use Roots\Sage\Wrapper;
     </div><!-- /.wrap -->
 
     <!-- category boxes -->
-    <?php  if (!(is_front_page())) :
+    <?php
         get_template_part('templates/category', 'boxes');
-    endif; ?>
+     ?>
 
     <?php
       do_action('get_footer');
       get_template_part('templates/footer');
       wp_footer();
     ?>
+  </div>
   </body>
 </html>
