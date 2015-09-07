@@ -5,7 +5,9 @@
             <?php if (has_post_thumbnail()) :
                 the_post_thumbnail('single-img');
             endif; ?>
-            <h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+            <a class="entry-link" href="<?php the_permalink(); ?>">
+                <h1 class="entry-title"><?php the_title(); ?></h1>
+            </a>
         </div>
     </header>
     <?php get_template_part('templates/entry', 'meta'); ?>

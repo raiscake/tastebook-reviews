@@ -6,7 +6,9 @@
                 <?php if (has_post_thumbnail()) :
                     the_post_thumbnail('frontpage-img');
                 endif; ?>
-                <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <a class="entry-link" href="<?php the_permalink(); ?>">
+                    <h2 class="entry-title"><?php the_title(); ?></h2>
+                </a>
             </div>
         </header>
         <div class="entry-summary">
