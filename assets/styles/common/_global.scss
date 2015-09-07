@@ -36,6 +36,12 @@ ol {
   }
 }
 
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 // No gutters
 .row.no-gutters {
   margin-right: 0;

@@ -1,0 +1,30 @@
+aside {
+  font-size: .88em;
+  .widget {
+    margin-bottom: 3em;
+    padding-left: $grid-gutter-width;
+    h3 {
+      margin: 0;
+      padding: .5em;
+      font-size: 1em;
+      letter-spacing: .1em;
+      text-align: center;
+      background-color: lighten($light-gray, 5%);
+    }
+    > ul, ol {
+      padding: 0;
+      text-align: center;
+      list-style-type: none;
+      li {
+        padding: .5em;
+        border-bottom: 1px solid $light-gray;
+        &:hover {
+          background-color: lighten($light-gray, 7.5%);
+        }
+        a {
+          display: block;
+        }
+      }
+    }
+  }
+}
