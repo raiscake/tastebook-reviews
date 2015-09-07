@@ -124,6 +124,20 @@
       }
     }
   }
+  &.category-boxes {
+    .category-box {
+      @include aspect-ratio(1,1);
+      .category-link {
+        @include va-middle;
+        height: 100%;
+        padding: 0;
+        h4 {
+          margin: 0;
+          text-align: center;
+        }
+      }
+    }
+  }
 }
 
 #featuredCarousel {

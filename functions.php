@@ -32,7 +32,7 @@ unset($file, $filepath);
 
 /*****
  * Custom Functions
- */
+ ****/
 
 function the_category_filter($thelist,$separator=' ') {
     if(!defined('WP_ADMIN')) {
@@ -50,3 +50,12 @@ function the_category_filter($thelist,$separator=' ') {
         return $thelist;
 }
 add_filter('the_category','the_category_filter',10,2);
+
+
+/* Category Featured Images (requires plugin) */
+
+function category_featured_image($params) {
+    if( ( $category_image = category_image_src( $params, false ) ) != null ):
+        return $category_image;
+    endif;
+}

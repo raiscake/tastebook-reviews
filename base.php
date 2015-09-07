@@ -30,6 +30,12 @@ use Roots\Sage\Wrapper;
         <?php endif; ?>
       </div><!-- /.content -->
     </div><!-- /.wrap -->
+
+    <!-- category boxes -->
+    <?php  if (!(is_front_page())) :
+        get_template_part('templates/category', 'boxes');
+    endif; ?>
+
     <?php
       do_action('get_footer');
       get_template_part('templates/footer');
