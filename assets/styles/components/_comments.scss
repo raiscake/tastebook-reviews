@@ -21,9 +21,11 @@
 .comments {
   margin: 3em 0;
   h2, h3 {
+    margin-bottom: 0;
     font-size: 1.6em;
   }
   .comment-body {
+    padding-top: 2em;
      .comment-metadata {
        @extend .small;
        @extend .uppercase;
