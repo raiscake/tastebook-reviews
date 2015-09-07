@@ -24,3 +24,31 @@
     }
   }
 }
+
+
+/* Archive Page */
+
+.archive-list {
+  h3 {
+    margin: 1em 0 .5em;
+    font-size: 1.33em;
+    letter-spacing: .08em;
+  }
+  ul, ol {
+    margin-bottom: 3em;
+    padding: 0;
+    list-style-type: none;
+    border-top: 1px solid $light-gray;
+    li {
+      padding: .5em;
+      border-bottom: 1px solid $light-gray;
+      transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      &:hover {
+        background-color: lighten($light-gray, 7.5%);
+      }
+      a {
+        display: block;
+      }
+    }
+  }
+}
