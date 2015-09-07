@@ -10,7 +10,9 @@ $k = 1;
 ?>
 
 <section class="section category-boxes">
-        <div class="row no-gutters">
+    <div class="row no-gutters">
+        <div class="col-sm-6">
+            <div class="row no-gutters">
             <!-- Start Category Loop -->
             <?php foreach ($categories as $category) : ?>
                 <div class="col-sm-3">
@@ -25,9 +27,13 @@ $k = 1;
                     </div>
                 </div>
             <?php
-                if ($k % 2 == 0) :
-                    echo '</div><div class="row no-gutters">';
+                if ($k % 4 == 0) :
+                    echo '</div></div><div class="col-sm-6"><div class="row no-gutters">';
                 endif;
                 $k++;
             endforeach; ?>
-        </div></section>
+                </div><!-- row -- >
+            </div><!-- col-sm-6 -->
+        </div>
+    </div>
+</section>
