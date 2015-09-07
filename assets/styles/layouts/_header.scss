@@ -1,11 +1,13 @@
 .navbar-default {
   .navbar-header {
-    position: absolute;
-    right: 0;
-    left: 0;
-    float: none !important;
-    width: 180px;
     margin: auto;
+    @include min($sm) {
+      position: absolute;
+      right: 0;
+      left: 0;
+      float: none !important;
+      width: 180px;
+    }
     .navbar-brand {
       margin: 0;
       padding: 0;
@@ -13,17 +15,21 @@
   }
   .navbar-collapse {
     .navbar-nav {
-      @extend .col-sm-5;
-      li {
-        float: none !important;
-        display: inline-block;
-      }
-      &.left-nav {
-        text-align: right;
-        padding-right: $grid-gutter-width;
-      }
-      &.right-nav {
-        text-align: left;
+      margin-top: 0;
+      margin-bottom: 0;
+      @include min($sm) {
+        @extend .col-sm-5;
+        li {
+          float: none !important;
+          display: inline-block;
+        }
+        &.left-nav {
+          text-align: right;
+          padding-right: $grid-gutter-width;
+        }
+        &.right-nav {
+          text-align: left;
+        }
       }
     }
   }

@@ -126,9 +126,12 @@
   }
   &.category-boxes {
     .category-box {
-      @include aspect-ratio(1,1);
+      @include aspect-ratio(2,1);
       background-position: center;
       background-size: cover;
+      @include min($sm) {
+        @include aspect-ratio(1,1);
+      }
       .category-link {
         @include va-middle;
         width: 101%;

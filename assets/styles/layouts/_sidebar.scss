@@ -2,7 +2,9 @@ aside {
   font-size: .88em;
   .widget {
     margin-bottom: 3em;
-    padding-left: $grid-gutter-width;
+    @include min($sm) {
+      padding-left: $grid-gutter-width;
+    }
     h3 {
       margin: 0;
       padding: .5em;
