@@ -13,6 +13,11 @@
       padding: 0;
     }
   }
+  .navbar-toggle {
+    &:hover {
+      opacity: .85;
+    }
+  }
   .navbar-collapse {
     .navbar-nav {
       margin-top: 0;

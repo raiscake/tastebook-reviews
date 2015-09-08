@@ -12,10 +12,11 @@ article {
 }
 
 .article-header {
-  @include aspect-ratio(16,9);
+  @include aspect-ratio(3,2);
   .aspect-ratio {
     >img {
       @extend .img-responsive;
+      width: 100%;
     }
     .entry-overlay {
       position: absolute;
@@ -43,11 +44,14 @@ article {
       display: inline-block;
       color: $white;
       padding: 0 .5em;
-      font-size: 1.6em;
+      font-size: 1.25em;
       font-weight: 700;
       letter-spacing: .08em;
-      line-height: 1.4;
       text-transform: uppercase;
+      @include min($sm) {
+        font-size: 1.6em;
+        line-height: 1.4;
+      }
     }
   }
   &:hover {
