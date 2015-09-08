@@ -5,8 +5,8 @@
   .footer-info {
     margin: 0 0 1em;
     li {
-      padding: .5em 0;
-      @include min($xs) {
+      padding: .5em 1em;
+      @include min($sm) {
         padding: 0 1em;
       }
     }
