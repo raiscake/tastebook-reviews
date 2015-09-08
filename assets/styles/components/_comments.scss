@@ -23,6 +23,9 @@
   h2, h3 {
     margin-bottom: 0;
     font-size: 1.6em;
+    &.comment-reply-title {
+      margin-bottom: .5em;
+    }
   }
   .comment-body {
     padding-top: 2em;
@@ -34,5 +37,13 @@
    }
   .comment-respond {
     margin-top: 3em;
+    .comment-notes {
+      margin-bottom: 2em;
+      color: lighten($text-color, 20%);
+      font-size: .88em;
+    }
+    label {
+      font-weight: 400;
+    }
   }
 }
