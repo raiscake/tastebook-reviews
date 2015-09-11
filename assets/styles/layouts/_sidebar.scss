@@ -6,7 +6,7 @@ aside {
       padding-left: $grid-gutter-width;
     }
     h3 {
-      margin: 0;
+      margin: 0 0 1em;
       padding: .5em;
       font-size: 1em;
       letter-spacing: .1em;
@@ -26,6 +26,16 @@ aside {
         }
         a {
           display: block;
+        }
+      }
+    }
+    .tp_recent_tweets {
+      float: none;
+      ul {
+        padding: 0 0 0 10px;
+        li {
+          float: none;
+          background-size: 16px 12px;
         }
       }
     }
