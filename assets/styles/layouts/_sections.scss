@@ -150,6 +150,9 @@
       background-position: center;
       background-size: cover;
       @include min($md) {
+        @include aspect-ratio(16,9);
+      }
+      @include min($lg) {
         @include aspect-ratio(1,1);
       }
       .category-link {
