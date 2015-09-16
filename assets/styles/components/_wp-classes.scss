@@ -29,7 +29,10 @@
 
 // Captions
 .wp-caption {
-  @extend .thumbnail;
+  display: block;
+  padding: 5px;
+  margin-bottom: 25px;
+  border: 1px solid $light-gray;
 }
 .wp-caption-text {
   padding: $thumbnail-caption-padding;

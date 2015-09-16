@@ -1,5 +1,6 @@
-<?php the_content(); ?>
-
+<div class="page-content">
+    <?php the_content(); ?>
+</div>
 
 <!-- Archive Page Template -->
 <?php if(is_page('archives')) : ?>

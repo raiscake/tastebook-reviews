@@ -15,7 +15,7 @@ $k = 1;
             <div class="row no-gutters">
             <!-- Start Category Loop -->
             <?php foreach ($categories as $category) : ?>
-                <div class="col-md-3">
+                <div class="col-sm-3">
                     <div class="category-box" style="background-image:url(<?= category_featured_image(array( 'term_id' => $category->cat_ID, 'size' => 'cat-box')); ?>)">
                         <div class="aspect-ratio">
                             <a href="<?= get_category_link( $category->term_id ) ?>" class="category-link">

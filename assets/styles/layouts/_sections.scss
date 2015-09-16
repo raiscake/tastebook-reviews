@@ -46,6 +46,7 @@
       }
     }
     .featured-title {
+      margin: .5em 0 0;
       font-size: 1.2em;
       @include min($sm) {
         font-size: 2em;
@@ -149,7 +150,7 @@
       @include aspect-ratio(3,1);
       background-position: center;
       background-size: cover;
-      @include min($md) {
+      @include min($sm) {
         @include aspect-ratio(16,9);
       }
       @include min($lg) {
@@ -162,8 +163,10 @@
         padding: 0;
         background: rgba(0,0,0,.6);
         transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-        @include min ($md) {
+        @include min ($sm) {
           width: 101%;
+        }
+        @include min ($lg) {
           height: 100%;
         }
         &:hover {
