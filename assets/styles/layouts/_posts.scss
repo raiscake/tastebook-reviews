@@ -17,7 +17,12 @@ article {
 }
 
 .article-header {
-  @include aspect-ratio(3,2);
+  padding: 5px;
+  border: 1px solid $light-gray;
+  .article-header-wrap {
+    position: relative;
+    @include aspect-ratio(3,2);
+  }
   .aspect-ratio {
     >img {
       @extend .img-responsive;
