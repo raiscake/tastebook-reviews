@@ -146,3 +146,10 @@ function custom_excerpt_length( $length ) {
     return 40;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+
+/******
+ * Tiled Gallery Settings
+ ******/
+if ( ! isset( $content_width ) )
+    $content_width = 800;

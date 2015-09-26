@@ -3,7 +3,8 @@
 $featured = get_category_by_slug('featured');
 $categories = get_categories( array(
     'child_of'                 => 0,
-    'exclude'                  => $featured->cat_ID
+    'exclude'                  => $featured->cat_ID,
+    'hide_empty'               => false
 ) );
 
 $k = 1;
@@ -32,7 +33,7 @@ $k = 1;
                 endif;
                 $k++;
             endforeach; ?>
-                </div><!-- row -- >
+                </div><!-- row -->
             </div><!-- col-sm-6 -->
         </div>
     </div>
