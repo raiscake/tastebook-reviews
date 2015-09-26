@@ -28,16 +28,22 @@
 
 <?php if (is_front_page()) :
     $first = true;
-    $featured = new WP_Query('category_name=featured&posts_per_page=5');
+    $featured = new WP_Query('category_name=featured&posts_per_page=5&orderby=rand');
     if ($featured->have_posts ()) :?>
 
     <div id="featuredCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
+
+            <?php
+            $l = 0;
+            while ($featured->have_posts()):
+            $featured->the_post();
+                $active_dot      = ($l === 0) ? "active" : ""; ?>
+                <li data-target="#myCarousel" data-slide-to="0" class="<?= $active_dot; ?>"></li>
+            <?php
+            $l++;
+            endwhile; ?>
         </ol>
 
         <!-- Wrapper for slides -->
