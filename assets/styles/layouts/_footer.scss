@@ -10,6 +10,9 @@
       @include min($sm) {
         padding: 0 1em;
       }
+      &.site-tracker {
+        display: none;
+      }
     }
   }
 }
