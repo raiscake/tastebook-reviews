@@ -17,6 +17,17 @@
     <div class="entry-content">
       <?php the_content(); ?>
     </div>
+      <div class="entry-cats">
+          <i class="fa fa-folder-open"></i> <?php the_category(', '); ?>
+          <div class="entry-tags">
+              <?php
+              if(get_the_tag_list()) {
+                  echo get_the_tag_list('<i class="fa fa-tags"></i> <ul class="list-inline entry-tags-list"><li>','</li><li>','</li></ul>');
+              }
+              ?>
+          </div>
+      </div>
+
     <?php comments_template('/templates/comments.php'); ?>
   </article>
 <?php endwhile; ?>
