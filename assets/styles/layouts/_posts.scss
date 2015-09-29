@@ -21,10 +21,10 @@ article {
     }
     .entry-tags {
       text-transform: uppercase;
-      @include min($md) {
+    /*  @include min($md) {
         float: right;
         display: inline-block;
-      }
+      } */
     }
     .entry-tags-list {
       display: inline-block;
