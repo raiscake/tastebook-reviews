@@ -52,3 +52,23 @@
     }
   }
 }
+
+
+/* Contact Page */
+
+.contact-form {
+  input {
+    &[type="text"], &[type="email"] {
+      @extend .form-control;
+    }
+    &[type="submit"] {
+      @extend .btn;
+      @extend .btn-primary;
+    }
+  }
+  textarea {
+    @extend .form-control;
+    max-width: 600px;
+    width: 100% !important;
+  }
+}
