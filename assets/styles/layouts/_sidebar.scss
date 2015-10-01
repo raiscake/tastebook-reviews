@@ -52,9 +52,13 @@ aside {
         #subscribe-email {
           display: inline-block;
           width: 54%;
+          vertical-align: top;
           input[type="email"] {
             @extend .form-control;
-            width: 95%;
+            width: 100%;
+            border-right: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
           }
           @include min($lg) {
             width: 62%;
@@ -62,9 +66,14 @@ aside {
         }
         #subscribe-submit {
           display: inline-block;
+          margin-left: -3px;
+          vertical-align: top;
           input[type="submit"] {
             @extend .btn;
             @extend .btn-primary;
+            border-left: 0;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
           }
         }
       }
