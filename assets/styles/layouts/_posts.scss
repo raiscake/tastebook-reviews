@@ -21,16 +21,16 @@ article {
     }
     .entry-tags {
       text-transform: uppercase;
-    /*  @include min($md) {
-        float: right;
-        display: inline-block;
-      } */
     }
     .entry-tags-list {
       display: inline-block;
       font-size: .78em;
+      .fa {
+        font-size: 1em;
+      }
       a {
         display: block;
+        margin-bottom: 5px;
         padding: 5px 8px;
         color: $white;
         line-height: 1;

@@ -22,7 +22,7 @@
           <div class="entry-tags">
               <?php
               if(get_the_tag_list()) {
-                  echo get_the_tag_list('<i class="fa fa-tags"></i> <ul class="list-inline entry-tags-list"><li>','</li><li>','</li></ul>');
+                  echo get_the_tag_list('<ul class="list-inline entry-tags-list"><li><i class="fa fa-tags"></i></li><li>','</li><li>','</li></ul>');
               }
               ?>
           </div>
